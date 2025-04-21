@@ -29,11 +29,22 @@ public class HlavniProgram {
         zofka.turnLeft(90);
     }
 
+    public void obdelnik (double stranaOA, double stranaOB) {
+        zofka.turnRight(90);
+        for (int i=0; i<2; i++) {
+            zofka.move(stranaOA);
+            zofka.turnLeft(90);
+            zofka.move(stranaOB);
+            zofka.turnLeft(90);
+        }
+        zofka.turnLeft(90);
+    }
 
     public void start() {
         //TODO Tady bude kód pro kreslení želví grafiky.
 //        trojuhelnik(50, 70, 70);
-        ctverec(50);
+//        ctverec(50);
+        obdelnik(50, 70);
     }
 
 }
