@@ -20,12 +20,20 @@ public class HlavniProgram {
         zofka.turnLeft(180-uhelB);
         zofka.turnLeft(90);
     }
-
+    public void ctverec (double stranaCt){
+        zofka.turnRight(90);
+        for (int i=0; i<4; i++) {
+            zofka.move(stranaCt);
+            zofka.turnLeft(90);
+        }
+        zofka.turnLeft(90);
+    }
 
 
     public void start() {
         //TODO Tady bude kód pro kreslení želví grafiky.
-        trojuhelnik(50, 70, 70);
+//        trojuhelnik(50, 70, 70);
+        ctverec(50);
     }
 
 }
