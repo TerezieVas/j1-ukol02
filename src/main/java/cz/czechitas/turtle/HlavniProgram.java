@@ -40,11 +40,20 @@ public class HlavniProgram {
         zofka.turnLeft(90);
     }
 
+    public void kolecko (double stranaK) {
+        zofka.turnRight(90);
+        for (int i=0; i<12; i++) {
+            zofka.move(stranaK);
+            zofka.turnLeft(30);
+        }
+        zofka.turnLeft(90);
+    }
     public void start() {
         //TODO Tady bude kód pro kreslení želví grafiky.
 //        trojuhelnik(50, 70, 70);
 //        ctverec(50);
-        obdelnik(50, 70);
+//        obdelnik(50, 70);
+        kolecko(40);
     }
 
 }
