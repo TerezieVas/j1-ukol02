@@ -61,19 +61,62 @@ cervenaBarva = new Color(250,0,50);
 Color oranzovaBarva;
 oranzovaBarva = new Color(200, 100, 0);
 
-        zofka.turnLeft(180);
+zofka.penUp();
+zofka.turnLeft(90);
+zofka.move(300);
+zofka.turnLeft(90);
+zofka.penDown(); //presun na misto zmrzliny
 
-        trojuhelnik(100,70,150,oranzovaBarva);
+trojuhelnik(100,70,150,oranzovaBarva);
+zofka.penUp();
+zofka.turnRight(90);
+zofka.move(65);
+zofka.turnLeft(90);
+zofka.move(35);
+zofka.turnLeft(180);
+zofka.penDown();
+kolecko(28, cervenaBarva);
+zofka.penUp(); //zmrzlina
 
-        zofka.penUp();
         zofka.turnRight(90);
-        zofka.move(65);
+        zofka.move(300);
         zofka.turnLeft(90);
-        zofka.move(35);
-        zofka.turnLeft(180);
-        zofka.penDown();
-        kolecko(28, cervenaBarva);
+        zofka.move(200);// presun na misto snehulaka
 
+Color modraBarva;
+modraBarva = new Color(0,100,250);
+zofka.penDown();
+kolecko(30,modraBarva);
+zofka.turnRight(90);
+zofka.penUp();
+zofka.move(40);
+zofka.turnRight(90);
+zofka.penDown();
+kolecko(50,modraBarva);
+zofka.penUp();
+zofka.move(185);
+zofka.turnLeft(90);
+zofka.move(5);
+zofka.turnRight(90);
+zofka.penDown();
+kolecko(70,modraBarva);
+
+zofka.penUp();
+zofka.turnRight(180);
+zofka.move(105);
+zofka.turnRight(90);
+zofka.move(65);
+zofka.penDown();
+kolecko(20,modraBarva);
+zofka.penUp();
+zofka.turnRight(180);
+zofka.move(190);
+zofka.turnLeft(90);
+zofka.move(20);
+zofka.turnRight(90);
+zofka.penDown();
+kolecko(20,modraBarva);
+zofka.penUp();//snehulak
     }
 
 }
